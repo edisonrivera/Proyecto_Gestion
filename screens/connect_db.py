@@ -4,10 +4,10 @@ from PyQt5.QtSql import QSqlDatabase, QSqlQuery, QSqlQueryModel
 def conecction():
     # ! Modificar con tus propios datos
     
-    server = "EDISON\SQLSERVER"
-    database = "VentaReal_sql"
-    username = "root"
-    password = "HoLa@outlook18"
+    server = ""
+    database = ""
+    username = ""
+    password = ""
 
     global db
     if (QSqlDatabase.contains("qt_sql_default_connection")):
