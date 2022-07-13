@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>730</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Veci's Market - Sistema Administrador</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/bxs-store-alt.svg</normaloff>../icons/bxs-store-alt.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lb_logo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>231</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../icons/logo_small.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tb_detalle">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>711</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>CODIGO</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>NOMBRE</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>CANTIDAD</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EN STOCK</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>VALOR UNITARIO</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>DESCUENTO</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>VALOR FINAL</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="lb_sub">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>470</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;SUBTOTAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_iva">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>530</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;I.V.A&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_valT">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>560</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;VALOR TOTAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_des">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>500</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#0055ff;&quot;&gt;DESCUENTO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_subCom">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>470</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="le_des">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>500</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="le_iva">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>530</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_valTCom">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>560</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_Factura">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>590</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>REALIZAR FACTURA</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../icons/bx-cart-add.svg</normaloff>../icons/bx-cart-add.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_slogan">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 170, 127);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Todo a tu alcance !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="Line" name="ln_head">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>30</y>
+      <width>431</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_dir">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>40</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dirección: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ld_dirCom">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>40</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Av. Francisco de Galarza y Naciones Unidas.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_tel">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>40</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Teléfono:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_telCom">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>40</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0961731848</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>730</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QMenu" name="menuProductos">
+    <property name="title">
+     <string>Productos</string>
+    </property>
+    <addaction name="actionBusqueda"/>
+    <addaction name="actionModificar"/>
+    <addaction name="actionEliminar"/>
+    <addaction name="actionInventario"/>
+   </widget>
+   <widget class="QMenu" name="menuBusqueda">
+    <property name="title">
+     <string>Busqueda</string>
+    </property>
+    <addaction name="actionFactura_x_Cliente"/>
+   </widget>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <addaction name="actionVer_Inventario"/>
+    <addaction name="actionGenerar"/>
+   </widget>
+   <widget class="QMenu" name="menuProveedores">
+    <property name="title">
+     <string>Proveedores</string>
+    </property>
+    <addaction name="actionBuscarProv"/>
+    <addaction name="actionModificarProv"/>
+    <addaction name="actionAgregarProv"/>
+    <addaction name="actionEliminarProv"/>
+   </widget>
+   <addaction name="menuProductos"/>
+   <addaction name="menuBusqueda"/>
+   <addaction name="menuReportes"/>
+   <addaction name="menuProveedores"/>
+  </widget>
+  <action name="actionBusqueda">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bx-search-alt.svg</normaloff>../icons/bx-search-alt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </action>
+  <action name="actionModificar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-store-alt.svg</normaloff>../icons/bxs-store-alt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionEliminar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-message-square-add.svg</normaloff>../icons/bxs-message-square-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Agregar</string>
+   </property>
+  </action>
+  <action name="actionInventario">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-message-square-x.svg</normaloff>../icons/bxs-message-square-x.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionInventario_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Cursos_de_Programacion/Python/Aplicacion_G/icons/bxs-data.svg</normaloff>../../Cursos_de_Programacion/Python/Aplicacion_G/icons/bxs-data.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Inventario</string>
+   </property>
+  </action>
+  <action name="actionFactura_x_Cliente">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-file-doc.svg</normaloff>../icons/bxs-file-doc.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Factura_x_Cliente</string>
+   </property>
+  </action>
+  <action name="actionCliente">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bx-body.svg</normaloff>../icons/bx-body.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Cliente</string>
+   </property>
+  </action>
+  <action name="actionVer_Inventario">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-data.svg</normaloff>../icons/bxs-data.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Ver_Inventario</string>
+   </property>
+  </action>
+  <action name="actionGenerar">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-file-plus.svg</normaloff>../icons/bxs-file-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Generar...</string>
+   </property>
+  </action>
+  <action name="actionBuscarProv">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bx-search-alt.svg</normaloff>../icons/bx-search-alt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </action>
+  <action name="actionModificarProv">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-notepad.svg</normaloff>../icons/bxs-notepad.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionAgregarProv">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-message-square-add.svg</normaloff>../icons/bxs-message-square-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Agregar</string>
+   </property>
+  </action>
+  <action name="actionEliminarProv">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/bxs-trash.svg</normaloff>../icons/bxs-trash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
